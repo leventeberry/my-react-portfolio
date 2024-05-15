@@ -1,9 +1,13 @@
+import Nav from './Navigation'
+
 export default function Header () {
     
     return (
         <header>
-            <h1>Header Element</h1>
+            <h1>LeVente Berry</h1>
+            <Nav />
         </header>
     );
 };
 
+ 
