@@ -8,14 +8,6 @@ export default function NavTabs() {
         <div className='navbar-nav'>
           <a>
             <Link
-              to="/"
-              className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
-            >
-              Home
-            </Link>
-          </a>
-          <a>
-            <Link
               to="/About"
               className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
             >

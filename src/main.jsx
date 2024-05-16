@@ -10,7 +10,6 @@ import './index.css'
 import App from './App.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
-import Home from './pages/Home.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Resume from './pages/Resume.jsx'
 import Error from './pages/Error.jsx'
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <About />,
       },
       {
         path: '/About',

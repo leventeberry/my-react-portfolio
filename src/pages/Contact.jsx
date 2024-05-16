@@ -40,7 +40,7 @@ export default function Contact() {
 
   return (
     <div className="mt-5">
-      <h1 className="text-center">Contact Page</h1>
+      <h3 className="text-center">Contact Page</h3>
       <form className="d-flex flex-column mt-5" action="#" id="contact-form">
         <div className="d-flex flex-wrap">
           <div className="d-flex flex-column p-2">

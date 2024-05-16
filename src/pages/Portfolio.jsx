@@ -1,7 +1,7 @@
 export default function Portfolio() {
     return (
       <div className="mt-5">
-        <h1 className="text-center">My Portfolio</h1>
+        <h3 className="text-center">My Portfolio</h3>
         <p>
           Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
           Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu
