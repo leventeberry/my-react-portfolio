@@ -5,19 +5,37 @@ export default function Contact() {
   const lnameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
-  const [formError, setFormError] = useState('');
+  const [errors, setErrors] = useState({
+    fname: '',
+    lname: '',
+    email: '',
+    message: ''
+  });
 
-  const checkFields = () => {
-    const fname = fnameRef.current.value.trim();
-    const lname = lnameRef.current.value.trim();
-    const email = emailRef.current.value.trim();
-    const message = messageRef.current.value.trim();
+  const handleBlur = (field) => {
+    const value = {
+      fname: fnameRef.current.value.trim(),
+      lname: lnameRef.current.value.trim(),
+      email: emailRef.current.value.trim(),
+      message: messageRef.current.value.trim()
+    };
 
-    if (fname === '' && lname === '' && email === '' && message === '') {
-      setFormError('Please fill out the entire form before submitting!');
-    } else {
-      setFormError('');
+    let errorMessage = '';
+    if (value[field] === '') {
+      errorMessage = 'This field is required';
+    } else if (field === 'email' && !validateEmail(value.email)) {
+      errorMessage = 'Invalid email address';
     }
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [field]: errorMessage
+    }));
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
   return (
@@ -32,8 +50,9 @@ export default function Contact() {
               name="fname"
               id="fname"
               ref={fnameRef}
-              onBlur={checkFields}
+              onBlur={() => handleBlur('fname')}
             />
+            {errors.fname && <div>{errors.fname}</div>}
           </div>
           <div className="d-flex flex-column p-2">
             <label htmlFor="lname">Last Name:</label>
@@ -42,8 +61,9 @@ export default function Contact() {
               name="lname"
               id="lname"
               ref={lnameRef}
-              onBlur={checkFields}
+              onBlur={() => handleBlur('lname')}
             />
+            {errors.lname && <div>{errors.lname}</div>}
           </div>
         </div>
         <div className="d-flex flex-column p-2">
@@ -53,8 +73,9 @@ export default function Contact() {
             name="email"
             id="email"
             ref={emailRef}
-            onBlur={checkFields}
+            onBlur={() => handleBlur('email')}
           />
+          {errors.email && <div>{errors.email}</div>}
         </div>
         <div className="d-flex flex-column p-2">
           <label htmlFor="message">Message:</label>
@@ -64,11 +85,11 @@ export default function Contact() {
             cols="50"
             rows="5"
             ref={messageRef}
-            onBlur={checkFields}
+            onBlur={() => handleBlur('message')}
           ></textarea>
+          {errors.message && <div>{errors.message}</div>}
         </div>
         <div className="d-flex flex-column align-items-center">
-          {formError && <div>{formError}</div>}
           <button type="submit" className="btn btn-primary p-2 col-3 mt-2">Submit</button>
         </div>
       </form>
