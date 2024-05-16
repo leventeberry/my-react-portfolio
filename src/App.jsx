@@ -6,11 +6,13 @@ function App() {
 
   return (
     <>
-      <Header />
-      <main className='container-fluid'>
-        <Outlet />
-      </main>
-      <Footer />
+      <div className="container-fluid d-flex flex-column align-items-center">
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }

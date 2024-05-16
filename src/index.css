@@ -1,0 +1,18 @@
+.stack-logo{
+    filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(90deg) brightness(100%) saturate(100%);
+    width: 50px;
+    height: 50px;
+    margin-right: 9px;
+}
+
+.linked-logo {
+    filter: invert(100%) brightness(100%);
+    width: 70px;
+    height: 70px;
+}
+
+.git-logo {
+    filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(90deg) brightness(100%) saturate(100%);
+    width: 35px;
+    height: 35px;
+}
