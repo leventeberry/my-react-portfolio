@@ -1,6 +1,6 @@
 export default function About() {
     return (
-      <div>
+      <div className="mt-5">
         <h1 className="text-center">About Page</h1>
         <p>
           Nunc pharetra finibus est at efficitur. Praesent sed congue diam.

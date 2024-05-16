@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-      <div>
+      <div className="mt-5">
         <h1 className="text-center">Home Page</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque

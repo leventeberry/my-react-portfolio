@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-      <div className="container-fluid d-flex flex-column align-items-center">
+      <div className="container-fluid d-flex flex-column align-items-center vh-100">
         <Header />
-        <main>
+        <main className='h-100'>
           <Outlet />
         </main>
         <Footer />
