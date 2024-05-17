@@ -2,13 +2,13 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { Outlet } from 'react-router-dom';
 
-function App() {
+export default function App() {
 
   return (
     <>
-      <div className="container-fluid d-flex flex-column align-items-center vh-100">
+      <div className="d-flex flex-column min-vh-100 container-fluid">
         <Header />
-        <main className='h-100'>
+        <main className='flex-grow-1'>
           <Outlet />
         </main>
         <Footer />
@@ -16,5 +16,3 @@ function App() {
     </>
   )
 }
-
-export default App

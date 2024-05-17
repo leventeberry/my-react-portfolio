@@ -30,3 +30,56 @@ footer {
     font-size: 30px;
     font-weight: 700;
 }
+
+/* Portfolio Settings */
+
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project {
+    position: relative;
+    margin: 10px;
+  }
+  
+  .project img {
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .project:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay a {
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+  }
+  
+  .overlay a:hover {
+    text-decoration: underline;
+  }
+  
