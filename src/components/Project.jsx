@@ -16,24 +16,24 @@ export default function Project() {
         },
         {
           id: 3,
-          title: "J.A.T.E.",
-          imgSrc: "",
-          deployedLink: "",
-          githubLink: ""
+          title: "U-To-Do",
+          imgSrc: "src\\assets\\utodo.png",
+          deployedLink: "https://u-to-do.onrender.com",
+          githubLink: "https://github.com/hokage-216/U-To-Do"
         },
         {
           id: 4,
-          title: "Project 4",
-          imgSrc: "path/to/image4.jpg",
-          deployedLink: "https://deployedproject4.com",
-          githubLink: "https://github.com/username/project4"
+          title: "CryptoMania",
+          imgSrc: "src\\assets\\cryptomania.png",
+          deployedLink: "https://hokage-216.github.io/the-A-team/",
+          githubLink: "https://github.com/hokage-216/the-A-team"
         },
         {
           id: 5,
           title: "Project 5",
-          imgSrc: "path/to/image5.jpg",
-          deployedLink: "https://deployedproject5.com",
-          githubLink: "https://github.com/username/project5"
+          imgSrc: "https://img.youtube.com/vi/SILDTKqweOE/0.jpg",
+          deployedLink: "https://github.com/hokage-216/social-lite",
+          githubLink: "https://github.com/hokage-216/social-lite"
         }
       ];
 
@@ -41,7 +41,7 @@ export default function Project() {
         <div className="mt-5">
       <h3 className="text-center">My Portfolio</h3>
       <div className='mt-5'>
-        <h4>Projects</h4>
+        <h4 className="text-center">Projects</h4>
         <div id="project-container" className='mt-5'>
           {projects.map((project) => (
             <div key={project.id} id={`project-${project.id}`} className="project border">

@@ -42,8 +42,8 @@ export default function Contact() {
     <div className="mt-5 container">
       <h3 className="text-center">Contact Page</h3>
       <form className="d-flex flex-column mt-5" action="#" id="contact-form">
-        <div className="d-flex flex-wrap">
-          <div className="d-flex flex-column p-2">
+        <div className="d-flex flex-wrap row">
+          <div className="d-flex flex-column p-2 col-6">
             <label htmlFor="fname">First Name:</label>
             <input
               type="text"
@@ -54,7 +54,7 @@ export default function Contact() {
             />
             {errors.fname && <div>{errors.fname}</div>}
           </div>
-          <div className="d-flex flex-column p-2">
+          <div className="d-flex flex-column p-2 col-6">
             <label htmlFor="lname">Last Name:</label>
             <input
               type="text"
@@ -66,7 +66,7 @@ export default function Contact() {
             {errors.lname && <div>{errors.lname}</div>}
           </div>
         </div>
-        <div className="d-flex flex-column p-2">
+        <div className="d-flex flex-column p-2 row">
           <label htmlFor="email">Email:</label>
           <input
             type="text"
@@ -77,7 +77,7 @@ export default function Contact() {
           />
           {errors.email && <div>{errors.email}</div>}
         </div>
-        <div className="d-flex flex-column p-2">
+        <div className="d-flex flex-column p-2 row">
           <label htmlFor="message">Message:</label>
           <textarea
             name="message"

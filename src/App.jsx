@@ -8,7 +8,7 @@ export default function App() {
     <>
       <div className="d-flex flex-column min-vh-100 container-fluid">
         <Header />
-        <main className='flex-grow-1'>
+        <main className='container-fluid flex-grow-1'>
           <Outlet />
         </main>
         <Footer />
