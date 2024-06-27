@@ -38,10 +38,9 @@ export default function Project() {
       ];
 
     return (
-        <div className="mt-5">
-      <h3 className="text-center">My Portfolio</h3>
+      <div className="mt-5 pb-5 container">
+      <h3 className="text-center page-title">Projects</h3>
       <div className='mt-5'>
-        <h4 className="text-center">Projects</h4>
         <div id="project-container" className='mt-5'>
           {projects.map((project) => (
             <div key={project.id} id={`project-${project.id}`} className="project border">

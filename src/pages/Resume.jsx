@@ -1,7 +1,7 @@
 export default function Resume() {
     return (
-      <div className="mt-5">
-        <h3 className="text-center">Resume</h3>
+      <div className="mt-5 container">
+        <h3 className="text-center page-title">Resume</h3>
         <div>
           <div className="mt-3 d-flex flex-column">
             <h4 className="">Objective</h4>

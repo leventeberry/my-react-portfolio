@@ -1,12 +1,48 @@
+:root {
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /* Color Scheme */
+  --main: #640707;
+  --main-secondary: #56423e;
+  --main-third: #bea6a1;
+  --text-contrast: #fff;
+}
 
 /* General Layout Settings */
 
 html, body, #root {
   height: 100vh;
-  width: 100vw;
+}
+
+main {
+  background-color: var(--main-secondary);
+  color: var(--text-contrast);
+  width: 100%;
+}
+
+/* Header (Nav) Settings */
+
+.page-title {
+  font-size: 2em;
+  color: var(--main-third);
+}
+
+#nav-title{
+  color: var(--main-secondary);
+}
+
+nav {
+  background-color: var(--main-third)
 }
 
 /* Footer Settings */
+
+footer {
+  background-color: var(--main-third);
+}
 
 .stack-logo{
   filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(90deg) brightness(100%) saturate(100%);
@@ -28,17 +64,14 @@ html, body, #root {
 }
 
 .avatar{
-  width: 75px;
-  height: 75px;
-}
-
-footer {
-  background-color: #fafafa;
+  width: 200px;
+  height: 200px;
 }
 
 #nav-title{
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 700;
+  margin-left: 2rem;
 }
 
 /* Portfolio Settings */
