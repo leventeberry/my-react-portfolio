@@ -4,40 +4,32 @@ export default function NavTabs() {
     const currentPage = useLocation().pathname;
   
     return (
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className='navbar-nav'>
-          <a>
-            <Link
-              to="/About"
-              className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
-            >
-              About
-            </Link>
-          </a>
-          <a>
-            <Link
-              to="/Portfolio"
-              className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
-            >
-              Portfolio
-            </Link>
-          </a>
-          <a>
-            <Link
-              to="/Contact"
-              className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
-            >
-              Contact
-            </Link>
-          </a>
-          <a>
-            <Link
-              to="/Resume"
-              className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
-            >
-              Resume
-            </Link>
-          </a>
+          <Link
+            to="/About"
+            className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
+          >
+            About
+          </Link>
+          <Link
+            to="/Portfolio"
+            className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
+          >
+            Portfolio
+          </Link>
+          <Link
+            to="/Contact"
+            className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
+          >
+            Contact
+          </Link>
+          <Link
+            to="/Resume"
+            className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
+          >
+            Resume
+          </Link>
         </div>
       </div>
     );
