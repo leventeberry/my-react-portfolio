@@ -11,7 +11,6 @@ export default function About() {
           On the back end, I am proficient in Node.js and Express.js, allowing me to build robust server-side applications. I have a solid understanding of SQL and NoSQL databases, enabling me to choose the right database solutions for various projects. My knowledge extends to ORM and MVC architecture, which I use to streamline database interactions and maintain clean code structures. I am also skilled in working with various Web APIs and third-party APIs, integrating external services to enhance application functionality. Additionally, I am familiar with building Progressive Web Apps (PWAs) and have experience working with the MERN stack, which combines MongoDB, Express.js, React, and Node.js to create powerful full stack applications.
           </p>
         </div>
-        
       </div>
     );
   }

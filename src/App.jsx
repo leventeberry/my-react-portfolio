@@ -6,13 +6,11 @@ export default function App() {
 
   return (
     <>
-      <div id='' className="d-flex flex-column min-vh-100 container-fluid">
-        <Header />
-        <main className='container-fluid flex-grow-1'>
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <main className='d-flex container flex-grow-1'>
+        <Outlet />
+      </main>
+      <Footer />
     </>
   )
 }
