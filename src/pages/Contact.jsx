@@ -89,8 +89,8 @@ export default function Contact() {
           ></textarea>
           {errors.message && <div>{errors.message}</div>}
         </div>
-        <div className="d-flex flex-column align-items-center">
-          <button type="submit" className="btn btn-primary p-2 col-3 mt-2">Submit</button>
+        <div className="d-flex flex-column align-items-center" id='contact-btn-container'>
+          <button type="submit" className="p-2 col-3 mt-2" id='contact-btn'>Submit</button>
         </div>
       </form>
     </div>
