@@ -25,12 +25,12 @@ export default function Project() {
           id: 4,
           title: "CryptoMania",
           imgSrc: "src\\assets\\cryptomania.png",
-          deployedLink: "https://hokage-216.github.io/the-A-team/",
+          deployedLink: "https://cryptomania-ateam.netlify.app/",
           githubLink: "https://github.com/hokage-216/the-A-team"
         },
         {
           id: 5,
-          title: "Project 5",
+          title: "Social-Lite",
           imgSrc: "https://img.youtube.com/vi/SILDTKqweOE/0.jpg",
           deployedLink: "https://github.com/hokage-216/social-lite",
           githubLink: "https://github.com/hokage-216/social-lite"

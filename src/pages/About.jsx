@@ -3,7 +3,7 @@ export default function About() {
       <div className="mt-5 container">
         <h3 className="text-center page-title">About Page</h3>
         <div className="p-4 mt-5 d-flex flex-column align-items-center">
-          <img src="src\assets\1716410878077.jpeg" alt="Avatar" className="avatar rounded-circle" />
+          <img src="src\assets\HeadShot-250.jpg" alt="Avatar" className="avatar rounded-circle" />
           <div className="mt-5">
             <p>
             I am a newly educated full stack web developer with a robust set of skills acquired through comprehensive training and hands-on projects. My expertise spans both front-end and back-end development, enabling me to create dynamic, responsive, and efficient web applications. On the front end, I have mastered React, including the intricacies of React state management and the useEffect hook. I am well-versed in HTML, CSS, and JavaScript, ensuring that my applications are not only functional but also visually appealing and user-friendly. My experience with Git has honed my ability to collaborate effectively with teams and manage version control seamlessly.
