@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <div className="mt-5 container">
       <h3 className="text-center page-title">Contact Page</h3>
-      <form className="d-flex flex-column mt-5" action="#" id="contact-form">
+      <form className="d-flex flex-column mt-5 mb-5" action="#" id="contact-form">
         <div className="d-flex flex-wrap row">
           <div className="d-flex flex-column p-2 col-6">
             <label htmlFor="fname">First Name:</label>

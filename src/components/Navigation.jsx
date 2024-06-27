@@ -4,7 +4,7 @@ export default function NavTabs() {
     const currentPage = useLocation().pathname;
   
     return (
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
         <div className='navbar-nav ms-3'>
           <Link
             to="/About"

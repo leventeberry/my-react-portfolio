@@ -1,6 +1,6 @@
 export default function Resume() {
     return (
-      <div className="mt-5 container">
+      <div className="mt-5 mb-5 container">
         <h3 className="text-center page-title">Resume</h3>
         <div>
           <div className="mt-3 d-flex flex-column">
@@ -31,7 +31,7 @@ export default function Resume() {
               <li>Passionate about continuous learning and staying updated with the latest web development trends and technologies.</li>
             </ul>
           </div>
-          <a href="src\assets\LeVenteBerry-Resume.pdf" download className="btn btn-primary mb-4">Download Resume</a>
+          <a href="src\assets\LeVenteBerry-Resume.pdf" download className="p-2 col-3 mb-4" id="download-btn">Download Resume</a>
         </div>
 
       </div>
