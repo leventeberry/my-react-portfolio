@@ -4,8 +4,14 @@ export default function NavTabs() {
     const currentPage = useLocation().pathname;
   
     return (
-      <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
+      <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div className='navbar-nav'>
+          <Link
+            to="/Home"
+            className={currentPage === '/Home' ? 'nav-link active' : 'nav-link'}
+          >
+            Home
+          </Link>
           <Link
             to="/About"
             className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}

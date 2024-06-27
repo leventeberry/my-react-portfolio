@@ -53,12 +53,26 @@ nav {
   background-color: var(--main-third)
 }
 
+a.nav-link {
+  color: var(--main);
+  font-size: 1.15em;
+}
+
+a.nav-link.active {
+  color: var(--main-white)!;
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+#navbarNavAltMarkup{
+  margin-right: 30px;
+}
+
 /* Footer Settings */
 
 footer {
   background-color: var(--main-third);
 }
-
 
 .svg-logo {
   width: 30px;
@@ -69,8 +83,6 @@ footer {
   width: 200px;
   height: 200px;
 }
-
-
 
 /* Project Settings */
 
@@ -83,6 +95,7 @@ footer {
 .project {
   position: relative;
   margin: 10px;
+  border: 1px solid var(--main);
 }
 
 .project img {
@@ -164,3 +177,7 @@ div input, div textarea {
 }
 
 /* Resume Settings */
+
+#resume-container {
+
+}
