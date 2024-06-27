@@ -3,28 +3,28 @@ export default function Project() {
         {
           id: 1,
           title: "Cryptoverse Blog",
-          imgSrc: "assets\\cryptoverse.png",
+          imgSrc: "src\\assets\\cryptoverse.png",
           deployedLink: "https://cryptoverse-blog-5710e4b7a1ef.herokuapp.com/home",
           githubLink: "https://github.com/hokage-216/cryptoverse-blog?tab=readme-ov-file"
         },
         {
           id: 2,
           title: "Urban Bassoon",
-          imgSrc: "assets\\jate.png",
+          imgSrc: "src\\assets\\jate.png",
           deployedLink: "https://github.com/hokage-216/urban-bassoon",
           githubLink: "https://github.com/hokage-216/urban-bassoon"
         },
         {
           id: 3,
           title: "U-To-Do",
-          imgSrc: "assets\\utodo.png",
+          imgSrc: "src\\assets\\utodo.png",
           deployedLink: "https://u-to-do.onrender.com",
           githubLink: "https://github.com/hokage-216/U-To-Do"
         },
         {
           id: 4,
           title: "CryptoMania",
-          imgSrc: "assets\\cryptomania.png",
+          imgSrc: "src\\assets\\cryptomania.png",
           deployedLink: "https://cryptomania-ateam.netlify.app/",
           githubLink: "https://github.com/hokage-216/the-A-team"
         },
