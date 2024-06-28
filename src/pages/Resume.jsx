@@ -31,7 +31,7 @@ export default function Resume() {
               <li>Passionate about continuous learning and staying updated with the latest web development trends and technologies.</li>
             </ul>
           </div>
-          <a href="src\assets\LeVente-Berry-Resume.pdf" download className="p-2 col-3 mb-4" id="download-btn">Download Resume</a>
+          <a href="/LeVente-Berry-Resume.pdf" download className="p-2 col-3 mb-4" id="download-btn">Download Resume</a>
         </div>
       </div>
     );
