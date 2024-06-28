@@ -1,7 +1,7 @@
 export default function About() {
     return (
       <div className="mt-5 container">
-        <h3 className="text-center page-title">About Page</h3>
+        <h3 className="text-center page-title">About Me</h3>
         <div className="p-4 mt-5 d-flex flex-column align-items-center">
           <img src="/HeadShot-250.jpg" alt="Avatar" className="avatar rounded-circle" />
           <div className="mt-5">

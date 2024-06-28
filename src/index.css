@@ -10,6 +10,8 @@
   --main-third: #bea6a1;
   --text-contrast: #fff;
   --main-white: #fff;
+  --faded-bg: rgba(100, 7, 7, 0.479);
+  --overlay: rgba(0, 0, 0, 0.8);
 }
 
 /* General Layout Settings */
@@ -22,6 +24,29 @@ main {
   background-color: var(--main-secondary);
   color: var(--text-contrast);
   width: 100%;
+}
+
+.center-container {
+  height: 200px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Home Page Settings */
+
+#welcome-container {
+  background-color: var(--faded-bg);
+  background-image: url('/laptop.jpg');
+  height: 100%;
+  z-index: 0;
 }
 
 /* Header (Nav) Settings */
@@ -50,7 +75,8 @@ main {
 }
 
 nav {
-  background-color: var(--main-third)
+  background-color: var(--main-third);
+  z-index: 1;
 }
 
 a.nav-link {
@@ -64,14 +90,11 @@ a.nav-link.active {
   font-weight: 500;
 }
 
-#navbarNavAltMarkup{
-  margin-right: 30px;
-}
-
 /* Footer Settings */
 
 footer {
   background-color: var(--main-third);
+  z-index: 1;
 }
 
 .svg-logo {
@@ -114,7 +137,7 @@ footer {
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--overlay);
   color: white;
   display: flex;
   justify-content: center;
@@ -144,7 +167,7 @@ footer {
   border-radius: 10px;
   border: 3px solid var(--main-third);
   padding: 50px;
-  background-color: rgba(100,7,7,0.24);
+  background-color: var(--faded-bg);
 }
 
 div input, div textarea {

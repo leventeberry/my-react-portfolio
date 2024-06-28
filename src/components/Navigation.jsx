@@ -5,7 +5,7 @@ export default function NavTabs() {
   
     return (
       <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div className='navbar-nav'>
+        <div className='navbar-nav text-center me-3'>
           <Link
             to="/Home"
             className={currentPage === '/Home' ? 'nav-link active' : 'nav-link'}
