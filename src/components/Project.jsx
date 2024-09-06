@@ -38,14 +38,14 @@ export default function Project() {
       ];
 
     return (
-      <div className="mt-5 pb-5 container">
-      <h3 className="text-center page-title">Projects</h3>
-      <div className='mt-5'>
-        <div id="project-container" className='mt-5'>
+      <div className="">
+      <h3 className="">Projects</h3>
+      <div className=''>
+        <div id="project-container" className=''>
           {projects.map((project) => (
             <div key={project.id} id={`project-${project.id}`} className="project">
-              <img src={project.imgSrc} alt={project.title} className="img-fluid" />
-              <div className="overlay">
+              <img src={project.imgSrc} alt={project.title} className="" />
+              <div className="">
                 <h5>{project.title}</h5>
                 <a href={project.deployedLink} target="_blank" rel="noopener noreferrer">
                   Deployed Application
@@ -60,4 +60,4 @@ export default function Project() {
       </div>
     </div>
     )
-};
+}

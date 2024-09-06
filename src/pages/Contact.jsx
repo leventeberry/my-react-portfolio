@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function Contact() {
   const fnameRef = useRef(null);
@@ -39,11 +39,11 @@ export default function Contact() {
   };
 
   return (
-    <div className="mt-5 container">
-      <h3 className="text-center page-title">Contact Me</h3>
-      <form className="d-flex flex-column mt-5 mb-5" action="#" id="contact-form">
-        <div className="d-flex flex-wrap row">
-          <div className="d-flex flex-column p-2 col-6">
+    <div className="">
+      <h3 className="">Contact Me</h3>
+      <form className="" action="#" id="contact-form">
+        <div className="">
+          <div className="">
             <label htmlFor="fname">First Name:</label>
             <input
               type="text"
@@ -54,7 +54,7 @@ export default function Contact() {
             />
             {errors.fname && <div>{errors.fname}</div>}
           </div>
-          <div className="d-flex flex-column p-2 col-6">
+          <div className="">
             <label htmlFor="lname">Last Name:</label>
             <input
               type="text"
@@ -66,7 +66,7 @@ export default function Contact() {
             {errors.lname && <div>{errors.lname}</div>}
           </div>
         </div>
-        <div className="d-flex flex-column p-2 row">
+        <div className="">
           <label htmlFor="email">Email:</label>
           <input
             type="text"
@@ -77,7 +77,7 @@ export default function Contact() {
           />
           {errors.email && <div>{errors.email}</div>}
         </div>
-        <div className="d-flex flex-column p-2 row">
+        <div className="">
           <label htmlFor="message">Message:</label>
           <textarea
             name="message"
@@ -89,8 +89,8 @@ export default function Contact() {
           ></textarea>
           {errors.message && <div>{errors.message}</div>}
         </div>
-        <div className="d-flex flex-column align-items-center" id='contact-btn-container'>
-          <button type="submit" className="p-2 col-3 mt-2" id='contact-btn'>Submit</button>
+        <div className="" id='contact-btn-container'>
+          <button type="submit" className="" id='contact-btn'>Submit</button>
         </div>
       </form>
     </div>

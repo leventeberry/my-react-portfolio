@@ -1,7 +1,7 @@
 export default function Footer () {
     
     return (
-        <footer className="footer d-flex container-fluid flex-column align-items-center">
+        <footer className="">
             <div>
                 {/* Stack Overflow Logo*/}
                 <a href="https://stackoverflow.com/users/15780740/levente-berry">
@@ -36,4 +36,4 @@ export default function Footer () {
             </div>
         </footer>
     );
-};
+}

@@ -7,7 +7,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className='d-flex flex-grow-1'>
+      <main className="">
         <Outlet />
       </main>
       <Footer />
