@@ -41,9 +41,9 @@ export default function Project() {
       <div className="">
       <h3 className="">Projects</h3>
       <div className=''>
-        <div id="project-container" className=''>
+        <div className=''>
           {projects.map((project) => (
-            <div key={project.id} id={`project-${project.id}`} className="project">
+            <div key={project.id} id={`project-${project.id}`} className="">
               <img src={project.imgSrc} alt={project.title} className="" />
               <div className="">
                 <h5>{project.title}</h5>

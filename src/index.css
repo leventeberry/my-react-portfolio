@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+.icon {
+  @apply size-9 m-3
+}
