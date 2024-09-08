@@ -2,8 +2,8 @@ export default function Home() {
 
     return (
         <>
-            <div className="" id="welcome-container">
-                <h1 className="">Welcome to my Portfolio!</h1>
+            <div className="flex w-screen justify-center bg-slate-400"> 
+                <h1>Welcome to my Portfolio!</h1>
             </div>
         </>
     );

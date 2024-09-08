@@ -5,3 +5,19 @@
 .icon {
   @apply size-9 m-3
 }
+
+.nav-link {
+  @apply p-2 m-1 w-full text-[#640707]
+}
+
+.nav-link:hover {
+  @apply rounded text-white bg-[#640707]
+}
+
+.nav-link-active {
+  @apply font-bold
+}
+
+.menu-icon {
+  @apply size-9 cursor-pointer text-[#640707]
+}

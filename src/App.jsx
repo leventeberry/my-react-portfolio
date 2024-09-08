@@ -1,56 +1,67 @@
+import { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
+
+
 
 export default function App() {
   const currentPage = useLocation().pathname;
+  const [menu, onMenu] = useState(false);
+
+  function onToggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    onMenu(!menu);
+    navMenu.classList.toggle('top-[-550%]');
+  }
+
+
 
   return (
     <>
-      <div className='flex flex-col h-screen relative align-middle'>
-        <nav className='flex justify-between w-screen h-24'>
-          <div className='flex text-center'>
-            <img className='size-11' src="/TM-Logo-50.png" alt="Portfolio Logo" />
-            <a href="/">LeVente Berry</a>
+      <div className='flex flex-col h-screen'>
+        <nav className='relative flex flex-row bg-orange-200 sm:flex-row justify-between'>
+
+          <div className='flex z-40 '>
+            <a href="/" className='flex items-center'>
+              <img className='size-11 m-2' src="/TM-Logo-50.png" alt="Portfolio Logo" />
+              <span className='text-lg text-[#640707] font-black min-w-48'>LeVente Berry</span>
+            </a>
           </div>
-          <div className=''>
-            <Link
-              to="/Home"
-              className={currentPage === '/Home' ? 'nav-link active' : 'nav-link'}
-            >
-              Home
-            </Link>
-            <Link
-              to="/About"
-              className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
-            >
-              About
-            </Link>
-            <Link
-              to="/Portfolio"
-              className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
-            >
-              Portfolio
-            </Link>
-            <Link
-              to="/Contact"
-              className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
-            >
-              Contact
-            </Link>
-            <Link
-              to="/Resume"
-              className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
-            >
-              Resume
-            </Link>
+
+          <div className='nav-menu mt-6 duration-300 sm:mt-0 absolute sm:static sm:min-h-fit sm:justify-end bg-orange-200 min-h-80 left-0 top-[-550%] w-full flex items-center px-5'>
+            <ul className='flex gap-6 sm:flex-row flex-col sm:items-center sm:gap-3'>
+              <li>
+                <Link to="/Home" className={currentPage === '/Home' ? 'nav-link nav-link-active' : 'nav-link'}> Home </Link>
+              </li>
+              <li>
+                <Link to="/About" className={currentPage === '/About' ? 'nav-link nav-link-active' : 'nav-link'}> About </Link>
+              </li>
+              <li>
+                <Link to="/Portfolio" className={currentPage === '/Portfolio' ? 'nav-link nav-link-active' : 'nav-link'}> Portfolio </Link>
+              </li>
+              <li>
+                <Link to="/Contact" className={currentPage === '/Contact' ? 'nav-link nav-link-active' : 'nav-link'}> Contact </Link>
+              </li>
+              <li>
+                <Link to="/Resume" className={currentPage === '/Resume' ? 'nav-link nav-link-active' : 'nav-link'}> Resume </Link>
+              </li>
+            </ul>  
+          </div>
+
+          <div className='flex items-center mr-5 z-50 sm:hidden'>
+            {menu ? 
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" className='menu-icon' onClick={onToggleMenu}><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg>
+              :
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" className='menu-icon' 
+              onClick={onToggleMenu}><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
+            }
           </div>
         </nav>
 
-
-        <main className="">
+        <main className="flex flex-grow">
           <Outlet />
         </main>
 
-        <footer className="sticky bottom-0 bg-orange-200 p-2">
+        <footer className="sticky bottom-0 bg-orange-200 p-1">
           <div className='flex justify-center'>
             {/* Stack Overflow Logo*/}
             <a href="https://stackoverflow.com/users/15780740/levente-berry">
