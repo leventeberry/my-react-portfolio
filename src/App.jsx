@@ -5,12 +5,10 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
 
 export default function App() {
   const currentPage = useLocation().pathname;
-  const [menu, onMenu] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   function onToggleMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    onMenu(!menu);
-    navMenu.classList.toggle('top-[-550%]');
+    setMenu(prevState => !prevState);
   }
 
 
@@ -20,29 +18,29 @@ export default function App() {
       <div className='flex flex-col h-screen'>
         <nav className='relative flex flex-row bg-orange-200 sm:flex-row justify-between'>
 
-          <div className='flex z-40 '>
+          <div className='flex z-50 h-full'>
             <a href="/" className='flex items-center'>
-              <img className='size-11 m-2' src="/TM-Logo-50.png" alt="Portfolio Logo" />
-              <span className='text-lg text-[#640707] font-black min-w-48'>LeVente Berry</span>
+              <img className='size-11 m-2 bg-orange-200' src="/TM-Logo-50.png" alt="Portfolio Logo" />
+              <span className='text-lg text-[#640707] font-black min-w-48 bg-orange-200'>LeVente Berry</span>
             </a>
           </div>
 
-          <div className='nav-menu mt-6 duration-300 sm:mt-0 absolute sm:static sm:min-h-fit sm:justify-end bg-orange-200 min-h-80 left-0 top-[-550%] w-full flex items-center px-5'>
+          <div className={`nav-menu mt-6 duration-500 sm:mt-0 absolute sm:static sm:min-h-fit sm:justify-end bg-orange-200 min-h-80 left-0 w-full flex items-center px-5 transition-all z-10 ${menu ? 'top-[10%]' : 'top-[-550%]'}`}>
             <ul className='flex gap-6 sm:flex-row flex-col sm:items-center sm:gap-3'>
               <li>
-                <Link to="/Home" className={currentPage === '/Home' ? 'nav-link nav-link-active' : 'nav-link'}> Home </Link>
+                <Link to="/Home" onClick={onToggleMenu} className={currentPage === '/Home' ? 'nav-link nav-link-active' : 'nav-link'}> Home </Link>
               </li>
               <li>
-                <Link to="/About" className={currentPage === '/About' ? 'nav-link nav-link-active' : 'nav-link'}> About </Link>
+                <Link to="/About" onClick={onToggleMenu} className={currentPage === '/About' ? 'nav-link nav-link-active' : 'nav-link'}> About </Link>
               </li>
               <li>
-                <Link to="/Portfolio" className={currentPage === '/Portfolio' ? 'nav-link nav-link-active' : 'nav-link'}> Portfolio </Link>
+                <Link to="/Portfolio" onClick={onToggleMenu} className={currentPage === '/Portfolio' ? 'nav-link nav-link-active' : 'nav-link'}> Portfolio </Link>
               </li>
               <li>
-                <Link to="/Contact" className={currentPage === '/Contact' ? 'nav-link nav-link-active' : 'nav-link'}> Contact </Link>
+                <Link to="/Contact" onClick={onToggleMenu} className={currentPage === '/Contact' ? 'nav-link nav-link-active' : 'nav-link'}> Contact </Link>
               </li>
               <li>
-                <Link to="/Resume" className={currentPage === '/Resume' ? 'nav-link nav-link-active' : 'nav-link'}> Resume </Link>
+                <Link to="/Resume" onClick={onToggleMenu} className={currentPage === '/Resume' ? 'nav-link nav-link-active' : 'nav-link'}> Resume </Link>
               </li>
             </ul>  
           </div>
